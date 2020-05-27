@@ -1,4 +1,4 @@
-# AWS S3 - SITE PUBLIC
+# AWS S3 - SITES PUBLIC
 
 * https://docs.aws.amazon.com/es_es/AmazonS3/latest/dev/example-bucket-policies.html
 * https://www.youtube.com/watch?v=uPnk8p3Glzg
