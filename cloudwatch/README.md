@@ -1,4 +1,24 @@
-# RUN
+# INSTALL AMAZON CLOUDWATCH AGENT
+```
+wget https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm
+rpm -i amazon-cloudwatch-agent.rpm
+```
+
+# INSTALL AWSCLI
+
+```
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+# CONFIGURE 
+
+```
+aws configure --profile AmazonCloudWatchAgent
+```
+
+# RUN WIZARD
 ```
 /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
 ```
