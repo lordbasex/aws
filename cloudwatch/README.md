@@ -233,3 +233,29 @@ Do you want to store the config in the SSM parameter store?
 default choice: [1]:
 2
 Program exits now.
+```
+
+# RUN
+```
+amazon-cloudwatch-agent-ctl -a fetch-config   -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
+```
+
+# Status
+```
+amazon-cloudwatch-agent-ctl -a status
+{
+  "status": "running",
+  "starttime": "2022-06-03T12:10:49+0000",
+  "configstatus": "configured",
+  "cwoc_status": "stopped",
+  "cwoc_starttime": "",
+  "cwoc_configstatus": "not configured",
+  "version": "1.247350.0b251814"
+}
+```
+
+# Restart Service 
+```
+/bin/systemctl restart amazon-cloudwatch-agent.service
+```
+
