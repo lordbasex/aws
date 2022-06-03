@@ -1,0 +1,70 @@
+{
+	"agent": {
+		"metrics_collection_interval": 60,
+		"run_as_user": "root"
+	},
+	"logs": {
+		"force_flush_interval": 5,
+		"logs_collected": {
+			"files": {
+				"collect_list": [
+					{
+						"encoding": "utf-8",
+						"file_path": "/var/log/asterisk/fail2ban",
+						"log_group_name": "/var/log/asterisk/fail2ban",
+						"log_stream_name": "fail2ban-{instance_id}",
+						"retention_in_days": -1,
+						"timestamp_format": "'%Y-%m-%dT%H:%M:%S%z'",
+						"timezone": "LOCAL"
+					},
+					{
+						"encoding": "utf-8",
+						"file_path": "/var/log/asterisk/full",
+						"log_group_name": "/var/log/asterisk/full",
+						"log_stream_name": "asterisk-{instance_id}",
+						"retention_in_days": -1,
+						"timestamp_format": "'%Y-%m-%dT%H:%M:%S%z'",
+						"timezone": "LOCAL"
+					},
+					{
+						"encoding": "utf-8",
+						"file_path": "/var/log/messages",
+						"log_group_name": "/var/log/messages",
+						"log_stream_name": "messages-{instance_id}",
+						"retention_in_days": -1,
+						"timestamp_format": "'%Y-%m-%dT%H:%M:%S%z'",
+						"timezone": "LOCAL"
+					},
+					{
+                        "encoding": "utf-8",
+						"file_path": "/var/log/vitalpbx/authentications.log",
+						"log_group_name": "/var/log/vitalpbx/authentications.log",
+						"log_stream_name": "vitalpbx-{instance_id}",
+						"retention_in_days": -1,
+                        "timestamp_format": "'%Y-%m-%dT%H:%M:%S%z'",
+						"timezone": "LOCAL"
+					}
+				]
+			}
+		}
+	},
+	"metrics": {
+		"metrics_collected": {
+			"disk": {
+				"measurement": [
+					"used_percent"
+				],
+				"metrics_collection_interval": 60,
+				"resources": [
+					"*"
+				]
+			},
+			"mem": {
+				"measurement": [
+					"mem_used_percent"
+				],
+				"metrics_collection_interval": 60
+			}
+		}
+	}
+}
